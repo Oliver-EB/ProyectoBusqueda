@@ -1,15 +1,20 @@
 {
   "expo": {
+    "userInterfaceStyle": "automatic",
     "name": "ProyectoBusqueda",
     "slug": "ProyectoBusqueda",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/icono.png",
+
     "splash": {
       "image": "./assets/splash.png",
+       "width" : "20%",
+      "height" : "20%",
+      "borderRadius": "30",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FFFFFF" , 
+     
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +27,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/splash.png",
         "backgroundColor": "#FFFFFF"
       }
     },
