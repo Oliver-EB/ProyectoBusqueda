@@ -22,15 +22,60 @@ function HomeScreen({ navigation }) {
 
       <StatusBar style="auto"/>
      
-      <Button 
-        title="Go to Details"
+      <TouchableOpacity
         onPress={() => navigation.navigate('Details')}
-         style={{borderRadius: '5px'}}
-      />
+        style={styles.button}>
+        <Text style={styles.btnText}>Iniciar sesion</Text>
+         </TouchableOpacity>
+
+         <Text style={styles.Subtituloo}>---------------------------------------o----------------------------------------</Text>
+       
+         <TouchableOpacity
+        onPress={() => navigation.navigate('Register')}
+        style={styles.button}>
+        <Text style={styles.btnText}>Crear cuenta</Text>
+         </TouchableOpacity>
       </View>
       </View>
   );
 }
+
+function RegisterScreen({navigation}){
+  return(
+  <View style={styles.ScreenRegister}>
+    <Image uri style={styles.logoScreen} source={require('./assets/IconoRegister.png')}></Image>
+        <Text>Holaaa wachoi</Text>
+        <TextInput
+      style={styles.inputs}
+      placeholder="UserName"
+      />
+      <TextInput
+      style={styles.inputs}
+      placeholder="Email"/>
+       <TextInput
+      style={styles.inputs}
+      placeholder="Password"
+      />
+      <TextInput
+      style={styles.inputs}
+      placeholder="Date of birth"/>
+       <TextInput
+      style={styles.inputs}
+      placeholder="Confirm password"
+      />
+   
+
+
+
+        <TouchableOpacity
+        onPress={() => navigation.navigate('Home')}
+        style={styles.button}>
+        <Text style={styles.btnText}>Iniciar sesion</Text>
+         </TouchableOpacity>
+
+      </View>
+    );
+  }
 
 function DetailsScreen({navigation}){
 return(
@@ -58,6 +103,7 @@ function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -68,7 +114,7 @@ export default App;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FEE3C3',
 flex: 1
   },
   container: {
@@ -98,18 +144,24 @@ flex: 1
   },
   Image: {
     marginTop: 10,
-    width: '60%',
-    height: '40%',
+    width: '40%',
+    height: '25%',
     borderRadius: 30,
   },
   button:  {
-   color: 'black',
+    marginTop: 15,
+    backgroundColor: "#ADAAAB",
+    width: "80%",
+    height: "7%",
+    borderRadius: 30,
+    alignItems: "center",
 
   },
   btnText: {
-    marginTop:2,
+    marginTop:5,
+    fontFamily: "Roboto",
  fontSize: 30,
- color: "white",
+ color: "Black",
   }, 
    Subtituloo: {
     marginTop:15,
@@ -117,20 +169,21 @@ flex: 1
     color: 'blue'
   }, 
   registro:{
-    marginTop:6,
+    marginTop:3,
     alignItems: "center",
     fontSize:20,
 color: "black",
 
   },
-  btnRegister : {
-    marginTop: 25,
-    backgroundColor: "#5EB4F6",
-    width: "15%",
-    height: "7%",
-    borderRadius: 30,
+
+  ScreenRegister: {
+    backgroundColor: "F3F3FF",
+    flex:1,
+    justifyContent: "center",
     alignItems: "center",
   },
-
-
+  logoScreen :{
+    width:"31%",
+    height: "16%",
+  }
 });
