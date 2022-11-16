@@ -30,7 +30,7 @@ function HomeScreen({ navigation }) {
       <TouchableOpacity
         onPress={() => navigation.navigate('Details')}
         style={styles.button}>
-        <Text style={styles.btnText}>Login</Text>
+        <Text style={styles.btnText}>Iniciar sesion</Text>
          </TouchableOpacity>
 
          <Text style={styles.Subtituloo}>---------------------------------------o----------------------------------------</Text>
@@ -38,7 +38,7 @@ function HomeScreen({ navigation }) {
          <TouchableOpacity
         onPress={() => navigation.navigate('Register')}
         style={styles.button}>
-        <Text style={styles.btnText}>Create account</Text>
+        <Text style={styles.btnText}>Crear cuenta</Text>
          </TouchableOpacity>
       
       </View>
