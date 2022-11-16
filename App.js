@@ -8,15 +8,20 @@ function HomeScreen({ navigation }) {
   return(
     <View style={styles.mainContainer}>
     <View style={styles.container}>
+     
       <Image uri style={styles.Image} 
       source={require('./assets/logo.png')} />
+      
       <Text style={styles.titulo}>Hello</Text>
       <Text style={styles.Subtitulo}>Sign in to your account </Text>
+      
       <TextInput
       style={styles.inputs}
       placeholder="olive7jimene2@gmail.com"
       />
+
       <TextInput
+      secureTextEntry={true}
       style={styles.inputs}
       placeholder="Password"/>
 
@@ -25,7 +30,7 @@ function HomeScreen({ navigation }) {
       <TouchableOpacity
         onPress={() => navigation.navigate('Details')}
         style={styles.button}>
-        <Text style={styles.btnText}>Iniciar sesion</Text>
+        <Text style={styles.btnText}>Login</Text>
          </TouchableOpacity>
 
          <Text style={styles.Subtituloo}>---------------------------------------o----------------------------------------</Text>
@@ -33,8 +38,9 @@ function HomeScreen({ navigation }) {
          <TouchableOpacity
         onPress={() => navigation.navigate('Register')}
         style={styles.button}>
-        <Text style={styles.btnText}>Crear cuenta</Text>
+        <Text style={styles.btnText}>Create account</Text>
          </TouchableOpacity>
+      
       </View>
       </View>
   );
@@ -43,36 +49,50 @@ function HomeScreen({ navigation }) {
 function RegisterScreen({navigation}){
   return(
   <View style={styles.ScreenRegister}>
-    <Image uri style={styles.logoScreen} source={require('./assets/IconoRegister.png')}></Image>
-        <Text>Holaaa wachoi</Text>
-        <TextInput
+     
+     <Image uri style={styles.ImageRegister} 
+      source={require('./assets/IconoRegister.png')} />
+
+<Text style={styles.RegisterTxt}>Create account,</Text>
+<Text style={styles.subTxt}>sign up to get started!</Text>
+
+<TextInput
       style={styles.inputs}
       placeholder="UserName"
       />
-      <TextInput
+
+<TextInput
       style={styles.inputs}
-      placeholder="Email"/>
-       <TextInput
+      placeholder="Email"
+      />
+
+<TextInput
+secureTextEntry={true}
       style={styles.inputs}
       placeholder="Password"
       />
-      <TextInput
+
+<TextInput
+secureTextEntry={true}
       style={styles.inputs}
-      placeholder="Date of birth"/>
-       <TextInput
-      style={styles.inputs}
-      placeholder="Confirm password"
+      placeholder="Confirm Password"
       />
-   
-
-
 
         <TouchableOpacity
         onPress={() => navigation.navigate('Home')}
         style={styles.button}>
-        <Text style={styles.btnText}>Iniciar sesion</Text>
+        <Text style={styles.btnText}>Login</Text>
          </TouchableOpacity>
 
+         
+         <TouchableOpacity
+        onPress={() => navigation.navigate('Home')}
+        style={styles.buttonRedSocial}>
+        <Text style={styles.btnTextToRegister}>Connect with Facebook</Text>
+         </TouchableOpacity>
+
+         <Text style={styles.subTxtSignUp}>I'm already a member. Sign Up</Text>
+         
       </View>
     );
   }
@@ -114,7 +134,7 @@ export default App;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: '#FEE3C3',
+    backgroundColor: 'F3F3FF',
 flex: 1
   },
   container: {
@@ -152,15 +172,15 @@ flex: 1
     marginTop: 15,
     backgroundColor: "#ADAAAB",
     width: "80%",
-    height: "7%",
-    borderRadius: 30,
+    height: "8%",
+    borderRadius: 15,
     alignItems: "center",
 
   },
   btnText: {
-    marginTop:5,
+    marginTop:10,
     fontFamily: "Roboto",
- fontSize: 30,
+ fontSize: 25,
  color: "Black",
   }, 
    Subtituloo: {
@@ -176,14 +196,52 @@ color: "black",
 
   },
 
+
   ScreenRegister: {
+    alignItems: "center",
     backgroundColor: "F3F3FF",
     flex:1,
-    justifyContent: "center",
-    alignItems: "center",
+    
+ 
   },
-  logoScreen :{
-    width:"31%",
-    height: "16%",
-  }
+ RegisterTxt: {
+ paddingRight:80,
+  marginTop:30,
+  fontSize: 40,
+  color: '#181818',
+  fontWeight: 'bold'
+ },
+ subTxt: {
+  paddingRight:140,
+  fontSize: 20,
+  color: '#181818',
+  fontWeight:'normal',
+ },
+ ImageRegister: {
+  marginTop: 30,
+  width: '30%',
+  height: '16%',
+  borderRadius: 60,
+ },
+  buttonRedSocial: {
+   marginTop:20,
+   display: 'flex',
+   flexDirection: 'column',
+   backgroundColor: "white",
+   width: "80%"  ,
+   height: "8%",
+   borderRadius: 30,
+  
+  },
+btnTextToRegister: {
+textAlign: 'center', 
+paddingTop: 20,
+fontSize: 20,
+},
+subTxtSignUp: {
+  paddingTop: 20,
+  fontSize: 20,
+  color: '#181818',
+  fontWeight:'normal',
+}
 });
