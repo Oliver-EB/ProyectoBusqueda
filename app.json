@@ -1,5 +1,6 @@
 {
   "expo": {
+    
     "userInterfaceStyle": "automatic",
     "name": "ProyectoBusqueda",
     "slug": "ProyectoBusqueda",
@@ -8,12 +9,12 @@
     "icon": "./assets/icono.png",
 
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/icono.png",
        "width" : "20%",
       "height" : "20%",
       "borderRadius": "30",
       "resizeMode": "contain",
-      "backgroundColor": "#FFFFFF" , 
+      "backgroundColor": "#000000"
      
     },
     "updates": {
@@ -27,8 +28,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/splash.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/icono.png",
+        "backgroundColor": "#000000"
       }
     },
     "web": {
